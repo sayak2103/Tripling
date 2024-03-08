@@ -1,0 +1,128 @@
+.main{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+.row>*{
+    padding-left: 0rem !important;
+    padding-right: 0rem !important;
+}
+
+.card{
+    display: inline-block ;
+    border-radius: 1rem;
+    height: 25rem;
+    margin: 0.5rem;
+}
+
+.main>.card:hover{
+    opacity: 0.5;
+}
+
+.card img{
+    width: 100%;
+    height: 60%;
+    border-radius: 1rem;
+}
+
+.listForm{
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.big-card{
+    height: 90vh;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.big-card>img{
+    width: 90%;
+    height:50%;
+}
+
+.big-card>p{
+    font-size: larger;
+    margin-bottom: 0.3rem !important;
+}
+
+.reviews, .review-form{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.reviews>.card{
+    height: auto;
+}
+
+.reviews>.card .card-link:hover{
+    font-weight: bolder;
+}
+
+.btn-check{
+    margin-top: 0.5rem;;
+}
+
+.category{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.category-outbox{
+    display: inline-block;
+    width: 5rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    opacity: 0.7;
+}
+.category-outbox:hover{
+    opacity: 1;
+}
+
+.filter{
+    display: none;
+}
+
+.selected-filter{
+    opacity: 1;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.display-none{
+    display: none;
+}
+
+@media(max-width:992px){
+    .listForm{
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .big-card{
+        width:80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+@media(max-width:486px){
+    .listForm{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .big-card{
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .reviews, .review-form{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}

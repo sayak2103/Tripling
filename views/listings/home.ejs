@@ -1,0 +1,110 @@
+<% layout('layouts/boilerplate')-%>
+
+<div class="sub-nav">
+<div class="category overflow-x-hidden ">
+    <div class="category-outbox Premium">
+    <label for="Premium" class="category-items">
+        <div><i class="fa-solid fa-lg fa-crown"></i></div>
+        <p>Premium</p>
+    </label>
+    <input type="checkbox" class="filter" id="Premium" name="Premium"/>
+    </div>
+
+    <div class="category-outbox Economic">
+    <label class="category-items" for="Economic">
+        <div><i class="fa-solid fa-lg fa-dollar-sign"></i></div>
+        <p>Economic</p>
+    </label>
+    <input type="checkbox" class="filter" id="Economic" name="Economic"/>
+    </div>
+
+    <div class="category-outbox Monument">
+        <label class="category-items" for="Monument">
+            <div><i class="fa-solid fa-lg fa-landmark-dome"></i></div>
+            <p>Monument</p>
+        </label>
+        <input type="checkbox" class="filter" id="Monument" name="Monument"/>
+        </div>
+
+    <div class="category-outbox Forest">
+    <label for="Forest" class="category-items">
+        <div><i class="fa-solid fa-lg fa-tree"></i></div>
+        <p>Forest</p>
+    </label>
+    <input type="checkbox" class="filter" id="Forest" name="Forest"/>
+    </div>
+
+    <div class="category-outbox Mountain">
+        <label for="Mountain" class="category-items">
+            <div><i class="fa-solid fa-lg fa-mountain-sun"></i></div>
+            <p>Mountain</p>
+        </label>
+        <input type="checkbox" class="filter" id="Mountain" name="Mountain"/>
+    </div>
+    
+    <div class="category-outbox Sea">
+        <label for="Sea" class="category-items">
+            <div><i class="fa-solid fa-lg fa-water"></i></div>
+            <p>Sea</p>
+        </label>
+        <input type="checkbox" class="filter" id="Sea" name="Sea"/>
+    </div>
+
+    <div class="category-outbox Snow">
+        <label for="Snow" class="category-items">
+            <div><i class="fa-solid fa-lg fa-snowflake"></i></div>
+            <p>Snow</p>
+        </label>
+        <input type="checkbox" class="filter" id="Snow" name="Snow"/>
+    </div>
+    
+    <div class="category-outbox Adventure">
+        <label for="Adventure" class="category-items">
+            <div><i class="fa-solid fa-lg fa-person-hiking"></i></div>
+            <p>Adventure</p>
+        </label>
+        <input type="checkbox" class="filter" id="Adventure" name="Adventure"/>
+    </div>
+    
+    <div class="category-outbox Camping">
+        <label for="Camping" class="category-items">
+            <div><i class="fa-solid fa-lg fa-campground"></i></div>
+            <p>Camping</p>
+        </label>
+        <input type="checkbox" class="filter" id="Camping" name="Camping"/>
+    </div>
+    
+    <div class="category-outbox Farm">
+        <label for="Farm" class="category-items">
+            <div><i class="fa-solid fa-lg fa-cow"></i></div>
+            <p>Farm</p>
+        </label>
+        <input type="checkbox" class="filter" id="Farm" name="Farm"/>
+    </div>
+    
+    <div class="category-outbox City">
+        <label for="City" class="category-items">
+            <div><i class="fa-solid fa-lg fa-city"></i></div>
+            <p>City</p>
+        </label>
+        <input type="checkbox" class="filter" id="City" name="City"/>
+    </div>
+</div>
+</div>
+<body>
+    <div class="main row">
+        <% for(listing of listings) { %>
+                <div class="card col-lg-2 col-md-3 col-sm-4" >
+                    <a href="http://localhost:8080/listings/<%=listing._id%>" style="text-decoration: none; color: black;">
+                    <img src="<%= listing.image.url %>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><%=listing.title%></h5>
+                        <h6>price : <b>&#8377;<%= listing.price.toLocaleString("en-IN")%></b>/night</h6>
+                        <h6>Location : <b><%= listing.location %></b></h6>
+                    </div>
+                    </a>
+                    <p class="categories" style="display: none;"><%= listing.category %></p>
+                </div>
+        <% } %>
+    </div>
+</body>

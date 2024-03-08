@@ -1,0 +1,90 @@
+<% layout('layouts/boilerplate')-%>
+
+<div class="listForm">
+<form action="/listings/new" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title </label>
+        <input type="text" class="form-control" id="title" name="listing[title]"  required>
+        <div class="valid-feedback">
+            Title looks good !!
+        </div>
+        <div class="invalid-feedback">
+            Enter a catchy title
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="description" class="form-label">Describe the place : </label>
+        <textarea class="form-control" id="description" rows="3" cols="20" name="listing[description]" required></textarea>
+        <div class="invalid-feedback">
+            Tell us more about your place 
+        </div>
+    </div>
+    
+    <div class="mb-3">
+        <label for="location" class="form-label">Location : </label>
+        <input type="text" class="form-control" id="location" name="listing[location]" required >
+        <div class="invalid-feedback">
+            Location is required
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="country" class="form-label">Country : </label>
+        <input type="text" class="form-control" id="country" name="listing[country]" required >
+        <div class="invalid-feedback">
+            Country is required
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="image" class="form-label">Image : </label>
+        <input type="file" class="form-control" id="image" name="image" />
+    </div>
+
+    <div class="mb-3">
+        <label for="price" class="form-label">Price  </label>
+        <input type="text" class="form-control" id="price" name="listing[price]" placeholder="per night" required >
+        <div class="invalid-feedback">
+            Please quote a price 
+        </div>
+    </div>
+
+    <p>What's special about your place?  </p>
+    <div class="mb-3">
+        <input type="checkbox" class="btn-check" id="btn-check-1" autocomplete="off" name="category[Economic]">
+        <label class="btn" for="btn-check-1">Economic</label>
+
+        <input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off" name="category[Camping]">
+        <label class="btn" for="btn-check-6">Camping</label>
+
+        <input type="checkbox" class="btn-check" id="btn-check-2" autocomplete="off" name="category[Mountain]">
+        <label class="btn" for="btn-check-2">Mountain</label>
+
+        <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" name="category[Sea]">
+        <label class="btn" for="btn-check-3">Sea</label>
+
+        <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off" name="category[Adventure]">
+        <label class="btn" for="btn-check-4">Adventure</label>
+
+        <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off" name="category[Farm]">
+        <label class="btn" for="btn-check-5">Farm</label>
+
+        <input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off" name="category[Camping]">
+        <label class="btn" for="btn-check-6">Camping</label>
+
+        <input type="checkbox" class="btn-check" id="btn-check-7" autocomplete="off" name="category[Snow]">
+        <label class="btn" for="btn-check-7">Snow</label>
+
+        <input type="checkbox" class="btn-check" id="btn-check-8" autocomplete="off" name="category[Forest]">
+        <label class="btn" for="btn-check-8">Forest</label>
+
+        <input type="checkbox" class="btn-check" id="btn-check-9" autocomplete="off" name="category[City]">
+        <label class="btn" for="btn-check-9">City</label>
+
+        <input type="checkbox" class="btn-check" id="btn-check-10" autocomplete="off" name="category[Monument]">
+        <label class="btn" for="btn-check-10">Monument</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
