@@ -91,6 +91,11 @@ app.use("/listings",listingsRouter);
 app.use("/listings/:id/review",reviewRouter);
 app.use("/user",userRouter);
 
+//for home page
+app.get("/",(req,res)=>{
+    res.redirect("/listings");
+})
+
 //for all routes other than the mentioned routes
 app.all("*",(req,res,next)=>{
     next(new ExpressError(404,"Page Not Found !"));
