@@ -9,7 +9,7 @@
         <p><%= listing.description %></p>
         <p><b>Price :</b> &#8377;<%= listing.price.toLocaleString("en-IN") %>/night</p>
         <p><b>Location :</b> <%= listing.location %></p>
-        <p><b>Country :</b> <%= listing.country %>/night</p>
+        <p><b>Country :</b> <%= listing.country %></p>
         <br>
 
         <% if(currUser && currUser._id.equals(listing.owner._id)) {%>
