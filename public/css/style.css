@@ -97,9 +97,7 @@
     display: none;
 }
 
-.footer{
-    position: absolute;
-    bottom: 0;
+footer{
     height: 7rem;
     width: 100%;
     background-color: rgb(212, 212, 212);
