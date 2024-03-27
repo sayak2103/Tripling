@@ -98,11 +98,10 @@
 }
 
 footer{
-    height: 7rem;
     width: 100%;
     background-color: rgb(212, 212, 212);
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
 }
 .refLink-outbox{
     margin-top: 2rem;
