@@ -119,6 +119,11 @@ footer{
     opacity: 1;
 }
 
+.category{
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
 @media(max-width:992px){
     .listForm{
         width: 60%;
